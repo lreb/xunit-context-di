@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.87
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCoreXunit", "NetCoreXunit\NetCoreXunit.csproj", "{194AB534-E175-4EA5-A427-872D2D4C8E51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCoreXunit.Test", "NetCoreXunit.Test\NetCoreXunit.Test.csproj", "{9ABE2D9D-1D99-48CB-AD60-3025C38BC6FF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{194AB534-E175-4EA5-A427-872D2D4C8E51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{194AB534-E175-4EA5-A427-872D2D4C8E51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{194AB534-E175-4EA5-A427-872D2D4C8E51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{194AB534-E175-4EA5-A427-872D2D4C8E51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9ABE2D9D-1D99-48CB-AD60-3025C38BC6FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9ABE2D9D-1D99-48CB-AD60-3025C38BC6FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9ABE2D9D-1D99-48CB-AD60-3025C38BC6FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9ABE2D9D-1D99-48CB-AD60-3025C38BC6FF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0093E901-3286-454D-A23C-25F03DE711A0}
+	EndGlobalSection
+EndGlobal
