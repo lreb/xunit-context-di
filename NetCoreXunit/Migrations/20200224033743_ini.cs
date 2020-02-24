@@ -3,10 +3,24 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace NetCoreXunit.Migrations
 {
-    public partial class new_table : Migration
+    public partial class ini : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "value",
+                columns: table => new
+                {
+                    value_id = table.Column<long>(nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
+                    content = table.Column<string>(nullable: true),
+                    status = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("pk_value", x => x.value_id);
+                });
+
             migrationBuilder.CreateTable(
                 name: "value_property",
                 columns: table => new
@@ -39,6 +53,9 @@ namespace NetCoreXunit.Migrations
         {
             migrationBuilder.DropTable(
                 name: "value_property");
+
+            migrationBuilder.DropTable(
+                name: "value");
         }
     }
 }

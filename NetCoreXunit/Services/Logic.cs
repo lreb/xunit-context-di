@@ -8,7 +8,7 @@ namespace NetCoreXunit.Services
 {
 	public class Logic : ILogic
 	{
-		private List<string> Values = new List<string>();
+		private readonly List<string> Values = new List<string>();
 		public Logic()
 		{
 			Values.Add("a");

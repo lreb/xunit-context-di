@@ -15,9 +15,16 @@
     <Compile Remove="Migrations\20200222150629_Init.Designer.cs" />
     <Compile Remove="Migrations\20200222151732_Init.cs" />
     <Compile Remove="Migrations\20200222151732_Init.Designer.cs" />
+    <Compile Remove="Migrations\20200223145312_ini.cs" />
+    <Compile Remove="Migrations\20200223145312_ini.Designer.cs" />
+    <Compile Remove="Migrations\20200223155643_ini.cs" />
+    <Compile Remove="Migrations\20200223155643_ini.Designer.cs" />
+    <Compile Remove="Migrations\20200224030722_ini.cs" />
+    <Compile Remove="Migrations\20200224030722_ini.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Migrations\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 

@@ -9,8 +9,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace NetCoreXunit.Migrations
 {
     [DbContext(typeof(NetCoreXunitContext))]
-    [Migration("20200222154521_new_enum")]
-    partial class new_enum
+    [Migration("20200224033743_ini")]
+    partial class ini
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

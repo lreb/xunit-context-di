@@ -18,11 +18,13 @@ namespace NetCoreXunit.Data
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
 			base.OnModelCreating(modelBuilder);
+
 			foreach (var entity in modelBuilder.Model.GetEntityTypes())
 			{
-				entity.Relational().TableName = entity.Relational().TableName.ToSnakeCase();
 
-				foreach (var property in entity.GetProperties())
+				entity.Relational().TableName = entity.Relational().TableName.ToSnakeCase();
+				
+				foreach (var property in entity.GetProperties()) 
 					property.Relational().ColumnName = property.Name.ToSnakeCase();
 
 				foreach (var key in entity.GetKeys())
@@ -43,8 +45,6 @@ namespace NetCoreXunit.Data
 
 
 		}
-		//protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-		//	=> optionsBuilder
 
 		public DbSet<Value> Value { get; set; }
 		public DbSet<ValueProperty> ValueProperty { get; set; }

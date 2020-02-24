@@ -30,7 +30,11 @@ namespace NetCoreXunit
 		public void ConfigureServices(IServiceCollection services)
 		{
 			services.AddScoped<ILogic, Logic>();
-			services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+			services.AddMvc()
+				.SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
+				.AddJsonOptions(
+					options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+				);
 
 			var connectionString = Configuration["PostgreSql:ConnectionString"];
 			var dbPassword = Configuration["PostgreSql:DbPassword"];
@@ -41,11 +45,7 @@ namespace NetCoreXunit
 			};
 			services.AddEntityFrameworkNpgsql()
 				.AddDbContext<NetCoreXunitContext>(options => 
-				options.UseNpgsql("Host=127.0.0.1;Port=5432;Database=postgres;User Id=postgres;Password=postgres;"));
-
-			//services.AddDbContext<ApplicationContext>(options =>
-			//	options.UseNpgsql(Configuration.GetConnectionString("PostgreSql:ConnectionString")));
-			// services.AddDbContext<ApplicationContext>(options => options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
+				options.UseNpgsql(connectionString));
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
